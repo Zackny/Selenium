@@ -25,8 +25,9 @@ public class ElementCommands {
         boolean ismerriedRadioButtonSelected=merriedRadioButton.isSelected();
         System.out.println("Before clicking "+ismerriedRadioButtonSelected);
         merriedRadioButton.click();
-        Thread.sleep(3000);
-        boolean ismarriedRadioButtonSelected=merriedRadioButton.isSelected();
+        boolean ismerriedRadioButtonselected = merriedRadioButton.isSelected();
+
+
         System.out.println("After clicking "+ismerriedRadioButtonSelected);
 
         driver.quit();

@@ -11,7 +11,7 @@ public class GetAllLinksFromEbuy {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver","Driver/chromedriver.exe");
         WebDriver driver=new ChromeDriver();
-        driver.get("http://ebuy.com");
+        driver.get("https://www.ebay.com/");
         List<WebElement> alllinks = driver.findElements(By.tagName("a"));
         System.out.println("Find elements "+alllinks.size());
 
@@ -19,12 +19,13 @@ public class GetAllLinksFromEbuy {
              ) {
             String linkText=link.getText();
             String fullLink=link.getAttribute("href");
+
             if(!linkText.isEmpty()){
                 System.out.println(linkText+" "+fullLink);
             }
 
         }
-
+        driver.quit();
 
     }
 }
